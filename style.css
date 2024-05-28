@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#accordion{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#accordion .row{
+    justify-content: space-between;
+}
+#accordion .que{
+    background-color: black;
+    color: aliceblue;
+    padding: 15px;
+    cursor: pointer;
+}
+#accordion .que.active span{
+    transform:rotate(180deg);
+    transition: 0.5s;
+}
+#accordion .que.active ~ .ans{
+    height: auto;
+    padding: 15px;
+}
+#accordion .ans{
+    background-color: rgba(0, 0, 0, 0.178);
+    margin: 5px 0;
+    height: 0;
+    overflow: hidden;
+}
